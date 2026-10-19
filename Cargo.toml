@@ -1,0 +1,21 @@
+[package]
+name = "duelscan"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "duelscan"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[dependencies]
+pnet = "0.34"
+rand = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "time", "macros", "sync"] }
+libc = "0.2"
+colorful = "0.2"
