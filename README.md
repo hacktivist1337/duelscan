@@ -23,7 +23,7 @@ approach rustscan's default mode uses), which needs no special privileges.
 ## Install
 
 ```bash
-cargo build --release
+cargo build --release --locked
 # binary: target/release/duelscan
 ```
 
